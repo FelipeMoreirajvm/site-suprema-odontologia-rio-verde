@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SkipLink } from "@/components/SkipLink";
 import { clinic } from "@/config/clinic";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           {children}
         </main>
+        <SiteFooter />
         <FloatingWhatsApp />
       </body>
     </html>
