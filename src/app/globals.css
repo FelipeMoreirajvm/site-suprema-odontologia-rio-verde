@@ -16,6 +16,10 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-pb-24;
+  }
+
   body {
     @apply bg-canvas font-sans text-ink;
   }
