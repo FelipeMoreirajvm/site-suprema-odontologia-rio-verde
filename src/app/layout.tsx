@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SkipLink } from "@/components/SkipLink";
 import { clinic } from "@/config/clinic";
 
 const geistSans = Geist({
@@ -19,7 +21,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-BR" className={`${geistSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        {children}
+        <SkipLink />
+        <SiteHeader />
+        <main
+          id="conteudo"
+          tabIndex={-1}
+          className="flex flex-1 flex-col focus:outline-none"
+        >
+          {children}
+        </main>
         <FloatingWhatsApp />
       </body>
     </html>

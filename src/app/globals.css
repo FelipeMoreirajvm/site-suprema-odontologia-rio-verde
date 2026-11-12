@@ -17,7 +17,7 @@
 
 @layer base {
   html {
-    @apply scroll-pb-24;
+    @apply scroll-pt-20 scroll-pb-24;
   }
 
   body {
